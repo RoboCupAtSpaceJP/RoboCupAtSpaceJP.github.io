@@ -18,8 +18,7 @@
 ## 概要
 RoboCup@Spaceは、将来の月・惑星探査や軌道上サービスに不可欠な「AI × 宇宙ロボット」技術の発展を目的とした競技会です。自律型ロボットの競技会「RoboCup Japan Open」に新たなカテゴリとして新設しました。
 
-コミュニティ：Discordサーバー <br>
-・https://discord.gg/nCs4AzANwt
+コミュニティ：[Discordサーバー](https://discord.gg/nCs4AzANwt)
 
 <br>
 
