@@ -3,28 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoboCup@Space YYYY | 大会情報テンプレート</title>
+    <title>RoboCup JapanOpen @Space Challenge YYYY | Tournament Template</title>
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <main class="section">
       <div class="container">
-        <h1>RoboCup@Space YYYY（テンプレート）</h1>
-        <p>
-          このページをコピーして<code>years/2027.html</code>のように年度別ページを作成してください。
-        </p>
-        <div class="card">
-          <h2>最低限更新する項目</h2>
-          <ol>
-            <li>タイトルと年度</li>
-            <li>開催日・開催形式</li>
-            <li>ルールリンク（PDFやGitHub）</li>
-            <li>結果テーブル</li>
-            <li>スケジュール</li>
-          </ol>
+        <div class="lang-switch" role="group" aria-label="language switch">
+          <button type="button" class="lang-button active" data-lang="ja">日本語</button>
+          <button type="button" class="lang-button" data-lang="en">English</button>
         </div>
-        <p><a href="../index.html">← トップページへ戻る</a></p>
+
+        <div class="lang-block" data-lang="ja">
+          <h1>RoboCup JapanOpen @Space Challenge YYYY（テンプレート）</h1>
+          <p>
+            このページをコピーして<code>years/2027.html</code>のように年度別ページを作成してください。
+          </p>
+          <div class="card">
+            <h2>最低限更新する項目</h2>
+            <ol>
+              <li>タイトルと年度</li>
+              <li>開催日・開催形式</li>
+              <li>ルールリンク（PDFやGitHub）</li>
+              <li>結果テーブル</li>
+              <li>スケジュール</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="lang-block" data-lang="en" hidden>
+          <h1>RoboCup JapanOpen @Space Challenge YYYY (Template)</h1>
+          <p>Copy this page and create a year-specific page such as <code>years/2027.html</code>.</p>
+          <div class="card">
+            <h2>Minimum items to update</h2>
+            <ol>
+              <li>Title and year</li>
+              <li>Date and format</li>
+              <li>Rule links (PDF or GitHub)</li>
+              <li>Results table</li>
+              <li>Schedule</li>
+            </ol>
+          </div>
+        </div>
+
+        <p><a href="../index.html">← Back to top page</a></p>
       </div>
     </main>
+
+    <script>
+      const buttons = document.querySelectorAll('.lang-button');
+      const blocks = document.querySelectorAll('.lang-block');
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const selected = button.dataset.lang;
+          buttons.forEach((b) => b.classList.toggle('active', b === button));
+          blocks.forEach((block) => {
+            block.hidden = block.dataset.lang !== selected;
+          });
+        });
+      });
+    </script>
   </body>
 </html>
