@@ -1,21 +1,32 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoboCup JapanOpen 2026 @Space Challenge | 大会情報</title> 
-    <link rel="stylesheet" href="/styles.css" />
+    <title>RoboCup JapanOpen 2026 @Space Challenge | Competition Information</title> 
+    <link rel="stylesheet" href="../styles.css" />
   </head>
+  
+  <head>
+    <style>
+      .center-img{
+        display:block;
+        margin:0 auto;
+      }
+    </style>
+  </head>
+
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="/en/">RoboCup JapanOpen @Space Challenge</a>
-        <nav aria-label="年度ページナビゲーション">
+        <a class="logo" href="../index.html">RoboCup JapanOpen @Space Challenge</a>
+        <nav aria-label="year page navigation">
           <ul class="nav-list">
-            <li><a href="#overview">概要</a></li>
-            <li><a href="#competition">競技内容</a></li>
-            <li><a href="#registration">参加登録</a></li>
-            <li><a href="#schedule">スケジュール</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#competition">Competition</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#schedule">Schedule</a></li>
           </ul>
         </nav>
       </div>
@@ -28,384 +39,163 @@
           <button type="button" class="lang-button active" data-url="/en/years/2026.html" aria-current="page">English</button>
         </div>
 
-        <div class="lang-block" data-lang="ja" hidden>
-          <h1>RoboCup JapanOpen 2026 @Space Challenge (第1回)</h1>
+        <div class="lang-block" data-lang="en">
+          <h1>RoboCup JapanOpen 2026 @Space Challenge (1st Edition)</h1>
           <p>
             <strong>@Space Challenge</strong>
-            は、宇宙における自律型ロボットの発展や社会実装を目指した、RoboCup Japan Openを対象とした競技会です。
-            本ページでは、2026年開催予定のRoboCup JapanOpen 2026 @Space Challengeの概要・ルール・参加方法を案内します。
+            is a competition category within RoboCup Japan Open that aims to advance autonomous robotics in space and its social implementation.
+            This page introduces the overview, rules, and participation process for RoboCup JapanOpen 2026 @Space Challenge planned for 2026.
           </p>
 
           <section id="overview" class="section">
-            <h2>概要</h2>
+            <h2>Overview</h2>
             <div class="card">
               <p>
-                @Space Challengeは、将来の月・惑星探査や軌道上サービスに不可欠な「AI × 宇宙ロボット」技術の発展を目的とした競技会です。
-                自律型ロボットの競技会「RoboCup Japan Open」に新たなカテゴリとして新設しました。
+                @Space Challenge is a competition designed to advance “AI × Space × Robotics” technologies for future on-orbit, lunar, and planetary development.
+                It has been newly established as a category in the autonomous robotics competition “RoboCup Japan Open.”
               </p>
               <p>
-                第1回目となる今回は、JAXAが開発したISS搭載ロボットInt-Ball2を用いたシナリオを想定します。
-                JAXAが開発したInt-Ball2のGazeboシミュレータを活用し、自律的な移動やマニピュレーション、協調作業といったタスクを競い合うことで、
-                教育と研究の両面から宇宙ロボット開発の裾野を広げます。
-                まずはシミュレータ上で開催し、将来的には実際の軌道上のISSにあるInt-Ball2を用いた競技へと発展させ、
-                宇宙ロボットに関するベンチマーク構築を目指します。
+                In this first edition, mission scenarios will be based on Int-Ball2, the ISS robot developed by JAXA.
+                By using JAXA’s Int-Ball2 Gazebo simulator, teams compete in tasks such as autonomous navigation, manipulation, and cooperative operations,
+                expanding the foundation of space robotics development from both education and research perspectives.
+                From the second edition onward, we aim to develop this into competitions using the actual Int-Ball2 on the ISS and to build benchmarks for autonomous space robots.
               </p>
-              <p>コミュニティ：<a href="https://discord.gg/nCs4AzANwt">Discordサーバー</a></p>
+              
+              <br>
+              <body>
+                <img src="../img/intball2_gazebo.jpg" class="center-img" style="width:80%;">
+              </body>
+              <br>
+
+              <p>
+                In addition to competition-related information sharing, we provide a community Discord server for technical exchange and development.
+                Everyone is welcome regardless of whether they participate in the competition, so please feel free to join.
+              </p>
+              <p> ▶ <a href="https://discord.gg/nCs4AzANwt">Discord Server</a></p>
             </div>
           </section>
 
           <section id="competition" class="section">
-            <h2>競技内容</h2>
+            <h2>Competition Details</h2>
             <div class="card">
-              <p>競技、技術交流会（採点なし）、Open Category（競技提案・デモ）（採点あり）、Exhibitionを実施します。</p>
-              <p><strong>競技：宇宙飛行士の撮影作業の自律的支援タスク</strong></p>
+              <p>In the first edition, we will hold the Competition, Technical Exchange, Open Category (competition proposals/demos), and Exhibition.</p>
+              <p><strong>Competition: Autonomous support task for astronaut photography operations</strong></p>
               <ol>
                 <li>
-                  標位置への自律移動
+                  Autonomous movement to the target position
                   <ul>
-                    <li>ドッキングステーションから目標位置まで自律的に移動する。</li>
-                    <li>この際、立っている宇宙飛行士を避ける。</li>
+                    <li>Move autonomously from the docking station to the target position.</li>
+                    <li>During movement, avoid standing astronauts.</li>
                   </ul>
                 </li>
                 <li>
-                  多視点からの撮影
+                  Photography from multiple viewpoints
                   <ul>
-                    <li>対象物体を検出し、画角の中心になるように撮影する。</li>
-                    <li>指定された複数の視点から画像を撮影する。</li>
+                    <li>Detect the target object and capture it so that it is centered in the frame.</li>
+                    <li>Take images from multiple specified viewpoints.</li>
                   </ul>
                 </li>
                 <li>
-                  ステーションへの自律帰還
+                  Autonomous return to the station
                   <ul>
-                    <li>再度、立っている宇宙飛行士を避ける。</li>
-                    <li>ステーションに自律的に帰還し、ドッキングする。</li>
+                    <li>Again, avoid standing astronauts.</li>
+                    <li>Return autonomously to the station and dock.</li>
                   </ul>
                 </li>
               </ol>
-              <p>
-                競技ではステージを設け、障害物（宇宙飛行士）を増やして難易度を調整します。
-                ステージ1（障害物 × 0）、ステージ2（障害物 × 1）、ステージ3（障害物 × 2）。
-              </p>
-              <p>
-                チュートリアル：
-                <a href="https://qiita.com/YukiIkeda_robot/items/aed18db60e41e4fa6a52">Qiita記事</a>
-              </p>
-            </div>
-          </section>
 
-          <section class="section">
-            <h2>シミュレータ環境</h2>
-            <div class="card">
-              <p>RoboCup JapanOpen 2026 @Space Challengeでは、JAXAが開発したInt-Ball2のGazeboシミュレータを用います。</p>
+              <br>
+              <body>
+                <img src="../img/robocup_space_task.jpg" class="center-img" style="width:80%;">
+              </body>
+              <br>
+
+              <p>The competition has stages, and the difficulty is adjusted by increasing obstacles (astronauts).</p>
               <ul>
-                <li>
-                  <a href="https://github.com/jaxa/int-ball2_simulaton">jaxa/int-ball2_simulaton</a><br />
-                  Int-Ball2のシミュレーション環境を提供するリポジトリ。
-                </li>
-                <li>
-                  <a href="https://github.com/jaxa/int-ball2_simulator_docker">jaxa/int-ball2_simulator_docker</a><br />
-                  DockerでInt-Ball2シミュレーションを実行できる環境を提供するリポジトリ。
-                </li>
+                <li>Stage 1 (Obstacles × 0)</li>
+                <li>Stage 2 (Obstacles × 1)</li>
+                <li>Stage 3 (Obstacles × 2)</li>
               </ul>
+              <p>
+                We have prepared a tutorial article on running the Int-Ball2 Gazebo simulator for this competition. Please refer to the following first.
+              </p>
+              <p> ▶ <a href="https://qiita.com/YukiIkeda_robot/items/aed18db60e41e4fa6a52">Tutorial Article (Qiita)</a></p>
             </div>
           </section>
 
           <section class="section">
-            <h2>採点項目（仮）</h2>
+            <h2>Scoring Items (Tentative)</h2>
             <div class="card">
-              <p>自動採点システムを開発中です。</p>
+              <p>An automatic scoring system is under development.</p>
               <table>
                 <thead>
                   <tr>
-                    <th>項目</th>
-                    <th>内容</th>
-                    <th>スコア（例）</th>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Score (Example)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>目標位置到達</td><td>指定座標に正確に到達したか</td><td>10点</td></tr>
-                  <tr><td>物体検出</td><td>対象物体を検出できたか</td><td>10点</td></tr>
-                  <tr><td>物体撮影</td><td>指定された複数視点から撮影できたか</td><td>5点 × 5箇所</td></tr>
-                  <tr><td>自律帰還</td><td>ステーションに戻り、ドッキング成功</td><td>10点</td></tr>
-                  <tr><td>障害物回避</td><td>移動経路で障害物を回避できたか</td><td>10点 × 2回</td></tr>
+                  <tr><td>Target Reach</td><td>Whether the robot reached the designated coordinates accurately</td><td>10 pts</td></tr>
+                  <tr><td>Object Detection</td><td>Whether the target object was detected</td><td>10 pts</td></tr>
+                  <tr><td>Object Imaging</td><td>Whether images were captured from multiple designated viewpoints</td><td>5 pts × 5 points</td></tr>
+                  <tr><td>Autonomous Return</td><td>Return to station and successful docking</td><td>10 pts</td></tr>
+                  <tr><td>Obstacle Avoidance</td><td>Whether obstacles were avoided along the route</td><td>10 pts × 2 times</td></tr>
                 </tbody>
               </table>
             </div>
           </section>
 
           <section id="registration" class="section">
-            <h2>@Space Challenge 参加登録について</h2>
+            <h2>About @Space Challenge Registration</h2>
             <div class="card">
-              <p>@Space Challenge への参加には、以下の2段階の登録手続きが必要です。</p>
-              <h3>1. 仮参加登録（チーム番号の取得）</h3>
-              <p>まず、以下のフォームから仮参加登録を行い、チーム番号を取得してください。</p>
-              <p>
-                仮参加登録フォーム：
-                <a href="https://forms.gle/teT7eBbSvphzZG5M8">https://forms.gle/teT7eBbSvphzZG5M8</a>
-              </p>
-              <p><strong>仮参加登録締切：2026年3月15日</strong></p>
-              <p>※期限内に仮参加登録が間に合わなかった場合は、個別にご相談ください。</p>
-
-              <h3>2. 参加登録</h3>
-              <p>仮参加登録で取得したチーム番号を用いて、以下のウェブサイトから参加登録を行ってください。</p>
-              <p>
-                参加登録ページ：
-                <a href="https://www.robocup.or.jp/JapanOpen2026/registration.html">
-                  https://www.robocup.or.jp/JapanOpen2026/registration.html
-                </a>
-              </p>
-              <p><strong>参加登録締切：2026年3月27日（金）</strong></p>
-
-              <h3>登録の流れ</h3>
+              <p>To participate in @Space Challenge, the following two-step registration process is required.</p>
+              
+              <h3>Registration Flow</h3>
               <ol>
-                <li>仮参加登録フォームから登録</li>
-                <li>チーム番号を受け取る</li>
-                <li>JapanOpen公式サイトから参加登録を行う</li>
+                <li>Register via the preliminary registration form</li>
+                <li>Receive your team number</li>
+                <li>Complete participation registration on the official JapanOpen website</li>
               </ol>
+              <br>
+
+              <h3>1. Preliminary Registration (Get Team Number)</h3>
+              <p>First, register using the form below to obtain your team number.</p>
+              <p> ▶ <a href="https://forms.gle/teT7eBbSvphzZG5M8">Preliminary Registration Form</a></p>
+              <p><strong>Preliminary registration deadline: March 15, 2026</strong></p>
+              <p>* If you cannot complete preliminary registration by the deadline, please contact us individually.</p>
+              <br>
+
+              <h3>2. Participation Registration</h3>
+              <p>Please use the team number obtained in preliminary registration to complete participation registration on the website below.</p>
+              <p> ▶ <a href="https://www.robocup.or.jp/JapanOpen2026/registration.html">Participation Registration Page</a></p>
+              <p><strong>Participation registration deadline: Friday, March 27, 2026</strong></p>
             </div>
           </section>
 
           <section id="schedule" class="section">
-            <h2>スケジュール（仮）</h2>
+            <h2>Schedule (Tentative)</h2>
             <div class="card">
-              <table>
-                <thead>
-                  <tr><th>年</th><th>月</th><th>概要</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>2025年</td><td>9月</td><td>ロボット学会にて@Space Challengeの構想を発表</td></tr>
-                  <tr><td></td><td>10月〜12月頃</td><td>Int-Ball2 Gazeboシミュレータ講習会、@Space Challengeキックオフミーティング</td></tr>
-                  <tr><td>2026年</td><td>4月</td><td>第1回 @Space Challenge競技会の実施（シミュレータのみ）</td></tr>
-                  <tr><td>2027年</td><td>5月</td><td>第2回 @Space Challenge競技会の実施（実機含む）</td></tr>
-                </tbody>
-              </table>
-              <ul>
-                <li>4月23-26日：ロボカップジャパンオープン（滋賀ダイハツアリーナ）</li>
-                <li>04/24：セットアップ</li>
-                <li>04/25：競技 + 技術交流会</li>
-                <li>04/26：Open Category（競技提案・デモ）</li>
-                <li>04/27：Exhibition、表彰式</li>
+              <h3>April 2026 Competition Schedule</h3>
+              <p class="schedule-note">RoboCup Japan Open (Shiga Daihatsu Arena)</p>
+              <ul class="daily-schedule">
+                <li><strong>April 23–26</strong>: RoboCup Japan Open</li>
+                <li><strong>April 24</strong>: Setup</li>
+                <li><strong>April 25</strong>: Competition & Technical Exchange</li>
+                <li><strong>April 26</strong>: Open Category (competition proposals/demos)</li>
+                <li><strong>April 27</strong>: Exhibition, Awards Ceremony</li>
               </ul>
             </div>
           </section>
 
           <section class="section">
-            <h2>実行委員会</h2>
+            <h2>Executive Committee</h2>
             <div class="card">
-              <p><strong>実行委員長</strong></p>
+              <p><strong>Chair</strong></p>
               <ul>
-                <li>岡田 浩之（東京情報デザイン専門職大学）</li>
+                <li>Hiroyuki Okada (Tokyo College of Information & Business)</li>
               </ul>
-              <p><strong>実行委員（姓のアルファベット順）</strong></p>
-              <ul>
-                <li>Amy Eguchi（University of California, San Diego）</li>
-                <li>萩原 良信（創価大学）</li>
-                <li>池田 勇輝（JAXA）</li>
-                <li>稲邑 哲也（玉川大学）</li>
-                <li>西野 順二（玉川大学）</li>
-                <li>野間 春生（立命館大学）</li>
-                <li>大橋 健（九州工業大学）</li>
-                <li>大井 翔（大阪工業大学）</li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>学会発表情報</h2>
-            <div class="card">
-              <h3>第43回日本ロボット学会 学術講演会 (RSJ2025)</h3>
-              <table>
-                <thead>
-                  <tr><th>発表タイトル</th><th>著者</th><th>要旨PDF</th></tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>RoboCup JapanOpen @Space Challenge の構想</td>
-                    <td>萩原 良信 ほか</td>
-                    <td><a href="/docs/1I1-03.pdf">📄 要旨PDFを開く</a></td>
-                  </tr>
-                  <tr>
-                    <td>ISS船内ロボットInt-Ball2による技術実証と@Space Challengeへの展開</td>
-                    <td>池田 勇輝 ほか</td>
-                    <td><a href="/docs/1I1-04.pdf">📄 要旨PDFを開く</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>参考情報</h2>
-            <div class="card">
-              <ul>
-                <li><a href="https://www.robocup.or.jp/">RoboCup Japan Official Website</a></li>
-                <li><a href="https://youtu.be/scgxLm3BY4k">無重力空間での自由飛行を進化させる！Int-Ball2が切り開く次世代ロボット技術</a></li>
-                <li><a href="https://humans-in-space.jaxa.jp/news/detail/003155.html">Int-Ball2が宇宙に旅立ちました！</a></li>
-                <li><a href="https://humans-in-space.jaxa.jp/news/detail/003518.html">Int-Ball2の初期チェックアウトを実施中！</a></li>
-                <li><a href="https://www.kenkai.jaxa.jp/research/innovation/intball2.html">Int-Ball2自律飛行と自動ドッキング実証実験に成功</a></li>
-                <li><a href="https://humans-in-space.jaxa.jp/biz-lab/news/detail/004741.html">宇宙で活躍する自律カメラロボット「Int-Ball2」、新たな機能拡張プラットフォームを軌道上で実証完了</a></li>
-                <li><a href="https://www.jaxa.jp/press/2025/07/20250731-1_j.html">「ICHIBAN」国際協力ミッションで世界初独自開発したロボット同士の連携実証に成功</a></li>
-              </ul>
-            </div>
-          </section>
-        </div>
-
-        <div class="lang-block" data-lang="en">
-          <h1>RoboCup JapanOpen 2026 @Space Challenge (1st Competition)</h1>
-          <p>
-            <strong>@Space Challenge</strong> is a RoboCup Japan Open competition category focused on advancing autonomous robotics for space applications.
-            This page summarizes the 2026 competition overview, rules, and participation process.
-          </p>
-
-          <section class="section">
-            <h2>Overview</h2>
-            <div class="card">
-              <p>
-                The challenge aims to accelerate AI × space robotics technologies needed for future lunar/planetary exploration and on-orbit services.
-                The first edition assumes mission scenarios using JAXA's ISS robot, Int-Ball2.
-              </p>
-              <p>
-                Teams will use the Int-Ball2 Gazebo simulator for autonomous navigation, manipulation, and cooperative tasks.
-                The competition starts in simulation and is planned to evolve toward real on-orbit operations and benchmarking.
-              </p>
-              <p>Community: <a href="https://discord.gg/nCs4AzANwt">Discord Server</a></p>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Competition Tasks</h2>
-            <div class="card">
-              <p>We will hold Competition, Technical Exchange (not scored), Open Category (scored), and Exhibition.</p>
-              <p><strong>Competition task: autonomous support for astronaut photography</strong></p>
-              <ol>
-                <li>
-                  Autonomous navigation to target position
-                  <ul>
-                    <li>Move autonomously from docking station to target point.</li>
-                    <li>Avoid standing astronaut obstacles.</li>
-                  </ul>
-                </li>
-                <li>
-                  Multi-viewpoint photography
-                  <ul>
-                    <li>Detect the target object and center it in the frame.</li>
-                    <li>Capture images from multiple specified viewpoints.</li>
-                  </ul>
-                </li>
-                <li>
-                  Autonomous return to station
-                  <ul>
-                    <li>Avoid standing astronaut obstacles again.</li>
-                    <li>Return and dock autonomously.</li>
-                  </ul>
-                </li>
-              </ol>
-              <p>
-                Difficulty is adjusted by increasing astronaut obstacles:
-                Stage 1 (0 obstacle), Stage 2 (1 obstacle), Stage 3 (2 obstacles).
-              </p>
-              <p>
-                Tutorial:
-                <a href="https://qiita.com/YukiIkeda_robot/items/aed18db60e41e4fa6a52">Qiita article</a>
-              </p>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Simulation Environment</h2>
-            <div class="card">
-              <p>RoboCup JapanOpen 2026 @Space Challenge uses the Int-Ball2 Gazebo simulator developed by JAXA.</p>
-              <ul>
-                <li>
-                  <a href="https://github.com/jaxa/int-ball2_simulaton">jaxa/int-ball2_simulaton</a><br />
-                  Repository providing the Int-Ball2 simulation environment.
-                </li>
-                <li>
-                  <a href="https://github.com/jaxa/int-ball2_simulator_docker">jaxa/int-ball2_simulator_docker</a><br />
-                  Docker-based repository for easier simulator setup and execution.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Scoring Items (Draft)</h2>
-            <div class="card">
-              <p>An automatic scoring system is under development.</p>
-              <table>
-                <thead>
-                  <tr><th>Item</th><th>Description</th><th>Example Score</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Target Arrival</td><td>Reached designated coordinates accurately</td><td>10 pts</td></tr>
-                  <tr><td>Object Detection</td><td>Detected target object</td><td>10 pts</td></tr>
-                  <tr><td>Object Photography</td><td>Captured from multiple specified viewpoints</td><td>5 pts × 5 points</td></tr>
-                  <tr><td>Autonomous Return</td><td>Returned to station and docked successfully</td><td>10 pts</td></tr>
-                  <tr><td>Obstacle Avoidance</td><td>Avoided obstacles during movement</td><td>10 pts × 2 times</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Participation Registration</h2>
-            <div class="card">
-              <p>Participation requires a two-step registration process.</p>
-              <h3>1. Pre-registration (obtain team number)</h3>
-              <p>Please complete pre-registration first and obtain your team number.</p>
-              <p>
-                Pre-registration form:
-                <a href="https://forms.gle/teT7eBbSvphzZG5M8">https://forms.gle/teT7eBbSvphzZG5M8</a>
-              </p>
-              <p><strong>Deadline: March 15, 2026</strong></p>
-              <p>*If you miss the deadline, please contact the organizers individually.</p>
-
-              <h3>2. Final registration</h3>
-              <p>Use the team number from pre-registration and complete registration on the official website.</p>
-              <p>
-                Registration page:
-                <a href="https://www.robocup.or.jp/JapanOpen2026/registration.html">https://www.robocup.or.jp/JapanOpen2026/registration.html</a>
-              </p>
-              <p><strong>Deadline: March 27, 2026 (Fri)</strong></p>
-
-              <h3>Flow</h3>
-              <ol>
-                <li>Submit pre-registration form</li>
-                <li>Receive team number</li>
-                <li>Complete registration on the JapanOpen official site</li>
-              </ol>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Schedule (Draft)</h2>
-            <div class="card">
-              <table>
-                <thead>
-                  <tr><th>Year</th><th>Month</th><th>Overview</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>2025</td><td>September</td><td>Concept presentation of @Space Challenge at RSJ</td></tr>
-                  <tr><td></td><td>Oct–Dec</td><td>Int-Ball2 Gazebo tutorials and kickoff meeting</td></tr>
-                  <tr><td>2026</td><td>April</td><td>1st @Space Challenge competition (simulation only)</td></tr>
-                  <tr><td>2027</td><td>May</td><td>2nd @Space Challenge competition (including real hardware)</td></tr>
-                </tbody>
-              </table>
-              <ul>
-                <li>Apr 23–26: RoboCup Japan Open (Shiga Daihatsu Arena)</li>
-                <li>04/24: Setup</li>
-                <li>04/25: Competition + Technical Exchange</li>
-                <li>04/26: Open Category (competition proposal/demo)</li>
-                <li>04/27: Exhibition and Awards</li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Organizing Committee</h2>
-            <div class="card">
-              <p><strong>Chair</strong>: Hiroyuki Okada (Tokyo Information Design Professional University)</p>
-              <p><strong>Members (alphabetical by family name)</strong></p>
+              <p><strong>Committee Members (alphabetical by surname)</strong></p>
               <ul>
                 <li>Amy Eguchi (University of California, San Diego)</li>
                 <li>Yoshinobu Hagiwara (Soka University)</li>
@@ -418,24 +208,25 @@
               </ul>
             </div>
           </section>
+
           <section class="section">
-            <h2>Publications</h2>
+            <h2>Academic Presentation Information</h2>
             <div class="card">
               <h3>The 43rd Annual Conference of the Robotics Society of Japan (RSJ2025)</h3>
               <table>
                 <thead>
-                  <tr><th>Title</th><th>Authors</th><th>Abstract PDF</th></tr>
+                  <tr><th>Presentation Title</th><th>Authors</th><th>Abstract PDF</th></tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Concept of RoboCup JapanOpen @Space Challenge</td>
                     <td>Yoshinobu Hagiwara et al.</td>
-                    <td><a href="/docs/1I1-03.pdf">📄 Open PDF</a></td>
+                    <td> ▶ <a href="../docs/1I1-03.pdf">Open Abstract PDF</a></td>
                   </tr>
                   <tr>
-                    <td>Technical demonstration with ISS robot Int-Ball2 and extension to @Space Challenge</td>
+                    <td>Technology Demonstration with ISS Intra-vehicular Robot Int-Ball2 and Its Expansion to @Space Challenge</td>
                     <td>Yuki Ikeda et al.</td>
-                    <td><a href="/docs/1I1-04.pdf">📄 Open PDF</a></td>
+                    <td> ▶ <a href="../docs/1I1-04.pdf">Open Abstract PDF</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -443,22 +234,21 @@
           </section>
 
           <section class="section">
-            <h2>References</h2>
+            <h2>Reference Information</h2>
             <div class="card">
               <ul>
-                <li><a href="https://www.robocup.or.jp/">RoboCup Japan Official Website</a></li>
-                <li><a href="https://youtu.be/scgxLm3BY4k">Int-Ball2 next-generation robotics video</a></li>
-                <li><a href="https://humans-in-space.jaxa.jp/news/detail/003155.html">Int-Ball2 launched to space</a></li>
-                <li><a href="https://humans-in-space.jaxa.jp/news/detail/003518.html">Initial checkout in progress</a></li>
-                <li><a href="https://www.kenkai.jaxa.jp/research/innovation/intball2.html">Autonomous flight and auto-docking demonstration</a></li>
-                <li><a href="https://humans-in-space.jaxa.jp/biz-lab/news/detail/004741.html">On-orbit verification of extension platform</a></li>
-                <li><a href="https://www.jaxa.jp/press/2025/07/20250731-1_j.html">ICHIBAN mission: inter-robot cooperation demonstration</a></li>
+                <li><a href="https://youtu.be/scgxLm3BY4k">Evolving free flight in microgravity: Int-Ball2 opens next-generation robotics technologies</a></li>
+                <li><a href="https://humans-in-space.jaxa.jp/news/detail/003155.html">Int-Ball2 has departed for space!</a></li>
+                <li><a href="https://humans-in-space.jaxa.jp/news/detail/003518.html">Initial checkout of Int-Ball2 is underway!</a></li>
+                <li><a href="https://www.kenkai.jaxa.jp/research/innovation/intball2.html">Int-Ball2 autonomous flight and automatic docking demonstration succeeded</a></li>
+                <li><a href="https://humans-in-space.jaxa.jp/biz-lab/news/detail/004741.html">Autonomous camera robot “Int-Ball2” completed on-orbit demonstration of a new functional expansion platform</a></li>
+                <li><a href="https://www.jaxa.jp/press/2025/07/20250731-1_j.html">“ICHIBAN” international cooperation mission achieved the world’s first demonstration of coordination between independently developed robots</a></li>
               </ul>
             </div>
           </section>
         </div>
 
-        <p><a href="/en/">← Back to top page</a></p>
+        <p><a href="../index.html">← Back to top page</a></p>
       </div>
     </main>
 
