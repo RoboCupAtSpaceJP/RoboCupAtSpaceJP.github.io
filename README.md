@@ -1,6 +1,6 @@
-# RoboCup@Space Website
+# RoboCup JapanOpen @Space Challenge Website
 
-このリポジトリは、**RoboCup@Space公式Webサイト（GitHub Pages）**のコンテンツを管理するためのものです。
+このリポジトリは、**RoboCup JapanOpen @Space Challenge公式Webサイト（GitHub Pages）**のコンテンツを管理するためのものです。
 
 ## 公開サイトの構成
 
@@ -13,7 +13,7 @@
 - `years/template.html`
   - 次年度ページ作成用テンプレート
 - `img/robocup_space.jpg`
-  - RoboCup@Spaceロゴ
+  - @Space Challengeロゴ
 
 ## 使い方
 
@@ -35,4 +35,4 @@ python3 -m http.server 8000
 ## 参考リンク
 
 - [RoboCup Japan Official Website](https://www.robocup.or.jp/)
-- [RoboCup@Space Community (Discord)](https://discord.gg/nCs4AzANwt)
+- [@Space Challenge Community (Discord)](https://discord.gg/nCs4AzANwt)

@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoboCup@Space | 公式サイト</title>
+    <title>RoboCup JapanOpen @Space Challenge | Official Site</title>
     <meta
       name="description"
-      content="RoboCup@Spaceの公式サイトです。競技概要、開催情報、各年度大会の結果・ルールを公開します。"
+      content="RoboCup JapanOpen @Space Challenge official site with competition overview, tournament information, and resources."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html">RoboCup@Space</a>
-        <nav aria-label="メインナビゲーション">
+        <a class="logo" href="index.html">RoboCup JapanOpen @Space Challenge</a>
+        <nav aria-label="main navigation">
           <ul class="nav-list">
-            <li><a href="#about">概要</a></li>
-            <li><a href="#news">お知らせ</a></li>
-            <li><a href="#tournaments">大会情報</a></li>
-            <li><a href="#resources">関連資料</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#tournaments">Tournaments</a></li>
+            <li><a href="#resources">Resources</a></li>
           </ul>
         </nav>
       </div>
@@ -27,103 +27,185 @@
 
     <main>
       <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">RoboCup Japan Open Category</p>
-            <h1>宇宙ロボット技術を競い、育てる。</h1>
-            <p>
-              RoboCup@Spaceは、将来の月・惑星探査や軌道上サービスに不可欠な
-              「AI × 宇宙ロボット」技術の発展を目的とした競技会です。
-            </p>
-            <div class="button-group">
-              <a class="button primary" href="#tournaments">大会一覧を見る</a>
-              <a class="button" href="https://discord.gg/nCs4AzANwt" target="_blank" rel="noopener noreferrer">コミュニティに参加</a>
+        <div class="container">
+          <div class="lang-switch" role="group" aria-label="language switch">
+            <button type="button" class="lang-button active" data-lang="ja">日本語</button>
+            <button type="button" class="lang-button" data-lang="en">English</button>
+          </div>
+
+          <div class="lang-block" data-lang="ja">
+            <div class="hero-grid">
+              <div>
+                <p class="eyebrow">RoboCup Japan Open Category</p>
+                <h1>宇宙ロボット技術を競い、育てる。</h1>
+                <p>
+                  @Space Challengeは、将来の月・惑星探査や軌道上サービスに不可欠な
+                  「AI × 宇宙ロボット」技術の発展を目的とした競技会です。
+                </p>
+                <div class="button-group">
+                  <a class="button primary" href="#tournaments">大会一覧を見る</a>
+                  <a class="button" href="https://discord.gg/nCs4AzANwt" target="_blank" rel="noopener noreferrer">コミュニティに参加</a>
+                </div>
+              </div>
+              <img src="img/robocup_space.jpg" alt="RoboCup JapanOpen @Space Challenge ロゴ" class="hero-image" />
             </div>
+
+            <section id="about" class="section">
+              <h2>@Space Challengeについて</h2>
+              <p>
+                自律型宇宙ロボットのアルゴリズム開発やシステム統合を通じて、
+                実運用に近い課題解決能力を競います。将来的には教育・研究・産業の橋渡しとなる
+                コミュニティ形成を目指しています。
+              </p>
+              <div class="grid three-cols">
+                <article class="card">
+                  <h3>目的</h3>
+                  <p>AI・制御・認識・航法など、宇宙ロボティクスの中核技術の育成。</p>
+                </article>
+                <article class="card">
+                  <h3>対象</h3>
+                  <p>学生チーム、研究機関、企業など幅広い参加者を想定。</p>
+                </article>
+                <article class="card">
+                  <h3>競技形式</h3>
+                  <p>シミュレーションベースのタスク達成と評価指標に基づく採点。</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="news" class="section section-alt">
+              <h2>お知らせ</h2>
+              <ul class="timeline">
+                <li><span class="date">2026-04-10</span><p>RoboCup JapanOpen 2026 @Space Challenge 大会ページを公開しました。</p></li>
+                <li><span class="date">2026-03-01</span><p>競技ルール（初版）を公開しました。</p></li>
+                <li><span class="date">2026-02-15</span><p>参加登録を開始しました。</p></li>
+              </ul>
+            </section>
+
+            <section id="tournaments" class="section">
+              <h2>年度別大会ページ</h2>
+              <p>各年度の結果・ルール・スケジュールは以下のページで管理できます。</p>
+              <div class="grid two-cols">
+                <article class="card">
+                  <h3>2026年度</h3>
+                  <p>大会概要、ルール、結果、関連リンクを掲載。</p>
+                  <a class="text-link" href="years/2026.html">2026ページへ →</a>
+                </article>
+                <article class="card">
+                  <h3>次年度テンプレート</h3>
+                  <p>このカードを複製して、2027以降のページを追加してください。</p>
+                  <a class="text-link" href="years/template.html">テンプレートページへ →</a>
+                </article>
+              </div>
+            </section>
+
+            <section id="resources" class="section section-alt">
+              <h2>関連資料</h2>
+              <ul>
+                <li><a href="https://www.robocup.or.jp/" target="_blank" rel="noopener noreferrer">RoboCup Japan Official Website</a></li>
+                <li><a href="https://youtu.be/scgxLm3BY4k" target="_blank" rel="noopener noreferrer">Int-Ball2関連動画</a></li>
+                <li><a href="https://humans-in-space.jaxa.jp/" target="_blank" rel="noopener noreferrer">JAXA 有人宇宙技術部門</a></li>
+              </ul>
+            </section>
           </div>
-          <img src="img/robocup_space.jpg" alt="RoboCup@Space ロゴ" class="hero-image" />
-        </div>
-      </section>
 
-      <section id="about" class="section">
-        <div class="container">
-          <h2>RoboCup@Spaceについて</h2>
-          <p>
-            自律型宇宙ロボットのアルゴリズム開発やシステム統合を通じて、
-            実運用に近い課題解決能力を競います。将来的には教育・研究・産業の橋渡しとなる
-            コミュニティ形成を目指しています。
-          </p>
-          <div class="grid three-cols">
-            <article class="card">
-              <h3>目的</h3>
-              <p>AI・制御・認識・航法など、宇宙ロボティクスの中核技術の育成。</p>
-            </article>
-            <article class="card">
-              <h3>対象</h3>
-              <p>学生チーム、研究機関、企業など幅広い参加者を想定。</p>
-            </article>
-            <article class="card">
-              <h3>競技形式</h3>
-              <p>シミュレーションベースのタスク達成と評価指標に基づく採点。</p>
-            </article>
+          <div class="lang-block" data-lang="en" hidden>
+            <div class="hero-grid">
+              <div>
+                <p class="eyebrow">RoboCup Japan Open Category</p>
+                <h1>Compete and grow space robotics technologies.</h1>
+                <p>
+                  @Space Challenge is a competition category that promotes AI × space robotics technologies for
+                  future lunar/planetary exploration and on-orbit services.
+                </p>
+                <div class="button-group">
+                  <a class="button primary" href="#tournaments">View tournaments</a>
+                  <a class="button" href="https://discord.gg/nCs4AzANwt" target="_blank" rel="noopener noreferrer">Join community</a>
+                </div>
+              </div>
+              <img src="img/robocup_space.jpg" alt="RoboCup JapanOpen @Space Challenge logo" class="hero-image" />
+            </div>
+
+            <section class="section">
+              <h2>About @Space Challenge</h2>
+              <p>
+                Teams develop and integrate autonomous space robotics algorithms to solve practical mission-like tasks.
+                The competition aims to build a community connecting education, research, and industry.
+              </p>
+              <div class="grid three-cols">
+                <article class="card">
+                  <h3>Purpose</h3>
+                  <p>Foster core space robotics technologies including AI, control, perception, and guidance.</p>
+                </article>
+                <article class="card">
+                  <h3>Who can join</h3>
+                  <p>Students, research institutes, and companies.</p>
+                </article>
+                <article class="card">
+                  <h3>Format</h3>
+                  <p>Simulation-based task completion with score-based evaluation.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="section section-alt">
+              <h2>News</h2>
+              <ul class="timeline">
+                <li><span class="date">2026-04-10</span><p>RoboCup JapanOpen 2026 @Space Challenge page is now available.</p></li>
+                <li><span class="date">2026-03-01</span><p>Initial competition rules were published.</p></li>
+                <li><span class="date">2026-02-15</span><p>Registration has started.</p></li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <h2>Tournament pages by year</h2>
+              <p>Results, rules, and schedules are managed in each year page.</p>
+              <div class="grid two-cols">
+                <article class="card">
+                  <h3>2026</h3>
+                  <p>Overview, rules, results, and related links.</p>
+                  <a class="text-link" href="years/2026.html">Go to 2026 page →</a>
+                </article>
+                <article class="card">
+                  <h3>Template</h3>
+                  <p>Use this page as a base to create future year pages.</p>
+                  <a class="text-link" href="years/template.html">Go to template page →</a>
+                </article>
+              </div>
+            </section>
+
+            <section class="section section-alt">
+              <h2>Resources</h2>
+              <ul>
+                <li><a href="https://www.robocup.or.jp/" target="_blank" rel="noopener noreferrer">RoboCup Japan Official Website</a></li>
+                <li><a href="https://youtu.be/scgxLm3BY4k" target="_blank" rel="noopener noreferrer">Int-Ball2 video</a></li>
+                <li><a href="https://humans-in-space.jaxa.jp/" target="_blank" rel="noopener noreferrer">JAXA Human Spaceflight Technology Directorate</a></li>
+              </ul>
+            </section>
           </div>
-        </div>
-      </section>
-
-      <section id="news" class="section section-alt">
-        <div class="container">
-          <h2>お知らせ（テンプレート）</h2>
-          <ul class="timeline">
-            <li>
-              <span class="date">2026-04-10</span>
-              <p>RoboCup@Space 2026 大会ページを公開しました。</p>
-            </li>
-            <li>
-              <span class="date">2026-03-01</span>
-              <p>競技ルール（初版）を公開しました。</p>
-            </li>
-            <li>
-              <span class="date">2026-02-15</span>
-              <p>参加登録を開始しました。</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="tournaments" class="section">
-        <div class="container">
-          <h2>年度別大会ページ</h2>
-          <p>各年度の結果・ルール・スケジュールは以下のページで管理できます。</p>
-          <div class="grid two-cols">
-            <article class="card">
-              <h3>2026年度</h3>
-              <p>大会概要、ルール、結果、関連リンクを掲載。</p>
-              <a class="text-link" href="years/2026.html">2026ページへ →</a>
-            </article>
-            <article class="card">
-              <h3>次年度テンプレート</h3>
-              <p>このカードを複製して、2027以降のページを追加してください。</p>
-              <a class="text-link" href="years/template.html">テンプレートページへ →</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="resources" class="section section-alt">
-        <div class="container">
-          <h2>関連資料</h2>
-          <ul>
-            <li><a href="https://www.robocup.or.jp/" target="_blank" rel="noopener noreferrer">RoboCup Japan Official Website</a></li>
-            <li><a href="https://youtu.be/scgxLm3BY4k" target="_blank" rel="noopener noreferrer">Int-Ball2関連動画</a></li>
-            <li><a href="https://humans-in-space.jaxa.jp/" target="_blank" rel="noopener noreferrer">JAXA 有人宇宙技術部門</a></li>
-          </ul>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>© RoboCup@Space. All rights reserved.</p>
+        <p>© RoboCup JapanOpen @Space Challenge. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      const buttons = document.querySelectorAll('.lang-button');
+      const blocks = document.querySelectorAll('.lang-block');
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const selected = button.dataset.lang;
+          buttons.forEach((b) => b.classList.toggle('active', b === button));
+          blocks.forEach((block) => {
+            block.hidden = block.dataset.lang !== selected;
+          });
+        });
+      });
+    </script>
   </body>
 </html>
