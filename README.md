@@ -1,6 +1,6 @@
-# RoboCup@Space
+# RoboCup JapanOpen @Space Challenge
 
-**RoboCup@Space**は、宇宙における自律型ロボットの発展や社会実装を目指したRoboCup Japan Openを対象とした競技会です。
+**@Space Challenge**は、宇宙における自律型ロボットの発展や社会実装を目指したRoboCup Japan Openを対象とした競技会です。
 
 ![RoboCup@Space Logo](img/robocup_space.jpg)
 
@@ -16,7 +16,7 @@
 <br>
 
 ## 概要
-RoboCup@Spaceは、将来の月・惑星探査や軌道上サービスに不可欠な「AI × 宇宙ロボット」技術の発展を目的とした競技会です。自律型ロボットの競技会「RoboCup Japan Open」に新たなカテゴリとして新設しました。
+@Space Challengeは、将来の月・惑星探査や軌道上サービスに不可欠な「AI × 宇宙ロボット」技術の発展を目的とした競技会です。自律型ロボットの競技会「RoboCup Japan Open」に新たなカテゴリとして新設しました。
 
 コミュニティ：[Discordサーバー](https://discord.gg/nCs4AzANwt)
 
