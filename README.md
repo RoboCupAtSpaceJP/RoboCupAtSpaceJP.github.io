@@ -33,6 +33,4 @@ python3 -m http.server 8000
 ブラウザで `http://localhost:8000` を開いて表示確認してください。
 
 ## 参考リンク
-
-- [RoboCup Japan Official Website](https://www.robocup.or.jp/)
-- [@Space Challenge Community (Discord)](https://discord.gg/nCs4AzANwt)
+- [RoboCup@Space JP Website](https://robocupatspacejp.github.io/)
