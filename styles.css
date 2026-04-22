@@ -235,3 +235,22 @@ code {
   background: var(--primary-dark);
   border-color: var(--primary-dark);
 }
+
+
+.judging-list {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.judging-item {
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0 0 0.9rem;
+  background: #f8faff;
+}
+
+.judging-item p {
+  margin: 0.6rem 0 0;
+}
