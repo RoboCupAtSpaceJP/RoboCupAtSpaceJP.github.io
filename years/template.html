@@ -4,62 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RoboCup JapanOpen @Space Challenge YYYY | Tournament Template</title>
+    <meta name="description" content="RoboCup JapanOpen @Space Challengeの年度別大会ページ用テンプレート。" />
+    <meta name="theme-color" content="#07101f" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307101f'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%2365a9ff' stroke-width='4'/%3E%3Cpath d='M12 38c12-8 28-11 42-6' fill='none' stroke='%239bc7ff' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='31' r='4' fill='%23fff'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body>
-    <main class="section">
-      <div class="container">
-        <div class="lang-switch" role="group" aria-label="language switch">
-          <button type="button" class="lang-button active" data-url="/years/template.html" aria-current="page">日本語</button>
-          <button type="button" class="lang-button" data-url="/en/years/template.html">English</button>
-        </div>
-
-        <div class="lang-block" data-lang="ja">
-          <h1>RoboCup JapanOpen @Space Challenge YYYY（テンプレート）</h1>
-          <p>
-            このページをコピーして<code>years/2027.html</code>のように年度別ページを作成してください。
-          </p>
-          <div class="card">
-            <h2>最低限更新する項目</h2>
-            <ol>
-              <li>タイトルと年度</li>
-              <li>開催日・開催形式</li>
-              <li>ルールリンク（PDFやGitHub）</li>
-              <li>結果テーブル</li>
-              <li>スケジュール</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="lang-block" data-lang="en" hidden>
-          <h1>RoboCup JapanOpen @Space Challenge YYYY (Template)</h1>
-          <p>Copy this page and create a year-specific page such as <code>years/2027.html</code>.</p>
-          <div class="card">
-            <h2>Minimum items to update</h2>
-            <ol>
-              <li>Title and year</li>
-              <li>Date and format</li>
-              <li>Rule links (PDF or GitHub)</li>
-              <li>Results table</li>
-              <li>Schedule</li>
-            </ol>
-          </div>
-        </div>
-
-        <p><a href="../index.html">← Back to top page</a></p>
-      </div>
+  <body class="year-page">
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+    <header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html" aria-label="RoboCup JapanOpen @Space Challenge トップページ"><span class="brand-mark" aria-hidden="true">@</span><span class="brand-copy"><span>RoboCup JapanOpen</span><strong>@Space Challenge</strong></span></a><nav class="main-nav" aria-label="テンプレートナビゲーション"><ul class="nav-list"><li><a href="#checklist">Checklist</a></li><li><a href="#structure">Structure</a></li></ul></nav><div class="lang-switch" aria-label="言語選択"><a class="lang-button active" href="#ja" aria-current="page">JA</a><a class="lang-button" href="#en">EN</a></div></div></header>
+    <main id="main-content">
+      <section class="year-hero" data-year="YYYY"><div class="year-hero-grid" aria-hidden="true"></div><div class="container year-hero-inner"><div><a class="breadcrumb" href="../index.html#tournaments">← TOURNAMENTS</a><p class="eyebrow"><span></span> YEAR PAGE TEMPLATE</p><h1><small>RoboCup JapanOpen</small>YYYY <em>@Space Challenge</em></h1><p class="year-lead">年度別大会ページを作成するための共通テンプレート。</p></div><dl class="year-meta"><div><dt>DATE</dt><dd>YYYY.MM.DD</dd></div><div><dt>VENUE</dt><dd>UPDATE REQUIRED</dd></div><div><dt>STATUS</dt><dd>TEMPLATE</dd></div></dl></div></section>
+      <section class="year-section"><div class="container year-section-grid"><header id="ja"><p class="section-index">JA / TEMPLATE</p><h2>更新項目</h2></header><div class="year-content"><p class="section-lead">このページをコピーして、年度別ページを作成してください。</p><div id="checklist" class="content-card prose-card"><span class="content-label">CHECKLIST</span><h3>最低限更新する項目</h3><ol class="template-checklist"><li><span>01</span>タイトルと年度</li><li><span>02</span>開催日・開催形式</li><li><span>03</span>ルールリンク（PDFやGitHub）</li><li><span>04</span>結果テーブル</li><li><span>05</span>スケジュール</li></ol></div></div></div></section>
+      <section class="year-section year-section-dark"><div class="container year-section-grid"><header id="en"><p class="section-index">EN / TEMPLATE</p><h2>Update items</h2></header><div class="year-content"><p class="section-lead">Copy this file to create a page for each tournament year.</p><div id="structure" class="content-card dark-card"><span class="content-label">CHECKLIST</span><h3>Minimum items to update</h3><ol class="template-checklist"><li><span>01</span>Title and year</li><li><span>02</span>Date and format</li><li><span>03</span>Rule links (PDF or GitHub)</li><li><span>04</span>Results table</li><li><span>05</span>Schedule</li></ol></div></div></div></section>
     </main>
-
-    <script>
-      const langButtons = document.querySelectorAll('.lang-button[data-url]');
-      langButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          const targetUrl = button.dataset.url;
-          if (targetUrl && targetUrl !== window.location.pathname) {
-            window.location.href = targetUrl;
-          }
-        });
-      });
-    </script>
+    <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><span class="brand-mark" aria-hidden="true">@</span><p><strong>RoboCup JapanOpen</strong><br />@Space Challenge</p></div><p class="footer-operator">Managed by SAIRA<br />Operated by the RoboCup JapanOpen @Space Challenge Organizing Committee</p><p class="copyright">© 2026 Space AI Robotics Association (SAIRA)</p></div></footer>
   </body>
 </html>
